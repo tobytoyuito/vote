@@ -1,0 +1,6 @@
+.inner_line path,
+.inner_line line {
+fill: none;
+stroke:#E7E7E7;
+shape-rendering: crispEdges;
+}
