@@ -8,3 +8,21 @@
 <div id="two-dimension"></div>
 </body>
 <script src="js/graph.js"></script>
+<script src="js/vote.js"></script>
+<script>
+
+  var places = [];
+  var your_position = calculate_position(you, weight);
+  places.push({"name":"you", "economic":your_position[0], "social":your_position[1]});
+
+  var result = party_position()
+  for(var party in result){
+    places.push({"name":party, "economic":result[party][0], "social":result[party][1]});
+  }
+  
+  showTwoDimension(places);
+  console.log(cal_score(you, result, weight, "Norm1"));
+  console.log(cal_score(you, result, weight, "Euclidean"));
+  console.log(cal_score(you, result, weight, "Other"));
+
+</script>

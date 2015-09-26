@@ -1,14 +1,14 @@
 var chocolates = [{
     "name": "IND",
-    "economic": 4.5,
-    "social":3.5 
+    "economic": 0.5,
+    "social":0.5 
   }, {
     "name": "you",
-    "economic": 1.4,
-    "social": 3.1
+    "economic": 1.0,
+    "social": 1.0
 }]
 
-showTwoDimension(chocolates)
+//showTwoDimension(chocolates)
 
 
 
@@ -31,12 +31,12 @@ function showTwoDimension(data) {
         .attr("transform", "translate(" + margins.left + "," + margins.top + ")");
   
   var x = d3.scale.linear()
-      .domain([1,5])
+      .domain([0,1])
       .range([0, width - margins.left - margins.right]);
 
 
   var y = d3.scale.linear()
-      .domain([1,5])
+      .domain([0,1])
       .range([height - margins.top - margins.bottom, 0]);
 
   svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + y.range()[0] + ")");
@@ -78,7 +78,7 @@ function showTwoDimension(data) {
     .tickSize(-(height-margins.top-margins.bottom),0,0)
     .tickFormat("")
     .orient("bottom")
-    .ticks(5);
+    .ticks(8);
   var xInnerBar=svg.append("g")
     .attr("class","inner_line")
     .attr("transform", "translate(0," + (y.range()[0]) + ")")
@@ -89,7 +89,7 @@ function showTwoDimension(data) {
     .tickSize(-(width-margins.left-margins.right),0,0)
     .tickFormat("")
     .orient("left")
-    .ticks(5);
+    .ticks(8);
   var xInnerBar=svg.append("g")
     .attr("class","inner_line")
     .attr("transform", "translate(" + x.range()[0] + ",0)")
