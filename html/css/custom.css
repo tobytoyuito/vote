@@ -4,3 +4,8 @@ fill: none;
 stroke:#E7E7E7;
 shape-rendering: crispEdges;
 }
+.inner_line > .tick:nth-child(6) > line {
+fill: none;
+stroke:#171717;
+shape-rendering: crispEdges;
+}
